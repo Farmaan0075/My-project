@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <style>
+        /* Body Styling */
+        body {
+            background: #e3f2fd;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure full height */
+        }
+
+        /* Header Styling */
+        .header {
+            background: #0a3871;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Centering Form */
+        .container {
+            width: 90%;
+            max-width: 500px;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+            margin: auto;
+        }
+
+        /* Form Elements */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input, select {
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px;
+            background: #0a3871;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #062c5c;
+        }
+
+        /* Fixed Footer */
+        .footer {
+            background: #0a3871;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        Student Registration
+    </div>
+
+    <!-- Form Container -->
+    <div class="container">
+        <form action="#" method="POST" enctype="multipart/form-data">
+            
+            <label for="name"><b>Name:</b></label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email"><b>Email:</b></label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone"><b>Phone:</b></label>
+            <input type="text" id="phone" name="phone" required>
+
+            <label for="course"><b>Course:</b></label>
+            <select id="course" name="course">
+                <option value="BCA">BCA</option>
+                <option value="BBA">BBA</option>
+                <option value="BSc">BSc</option>
+            </select>
+
+            <label for="address"><b>Address:</b></label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="dob"><b>Date of Birth:</b></label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="aadhar"><b>Aadhar Number:</b></label>
+            <input type="text" id="aadhar" name="aadhar" required>
+
+            <label for="profile"><b>Profile Image:</b></label>
+            <input type="file" id="profile" name="profile">
+
+            <label for="gender"><b>Gender:</b></label>
+            <select id="gender" name="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="guardian"><b>Guardian Name:</b></label>
+            <input type="text" id="guardian" name="guardian" required>
+
+            <label for="guardian_contact"><b>Guardian Contact:</b></label>
+            <input type="text" id="guardian_contact" name="guardian_contact" required>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <!-- Fixed Footer -->
+    <div class="footer">
+        © 2025 University Name. All rights reserved.
+    </div>
+
+</body>
+</html>

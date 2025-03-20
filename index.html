@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background: #e3f2fd;
+            color: #333;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        /* Header */
+        .header {
+            background: linear-gradient(to right, #0a3871, #0277bd);
+            color: white;
+            padding: 20px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        /* Navbar */
+        .navbar {
+            background: white;
+            padding: 12px;
+            box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .nav-links a {
+            background: #0a3871;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .nav-links a:hover {
+            background: #ff9800;
+            color: black;
+        }
+        /* Main Content */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px auto;
+            max-width: 95%;
+        }
+        .box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+            text-align: left;
+            flex: 1;
+            min-width: 280px;
+        }
+        .box h3 {
+            margin-bottom: 10px;
+            color: #0277bd;
+        }
+        .box ul {
+            list-style: none;
+        }
+        .box ul li a {
+            text-decoration: none;
+            color: #0a3871;
+            font-weight: bold;
+        }
+        /* Additional Sections */
+        .achievements {
+            background: #1565c0;
+            color: white;
+            padding: 40px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .achievements h2 {
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .stat {
+            background: white;
+            color: #0a3871;
+            padding: 15px;
+            border-radius: 10px;
+            width: 150px;
+            font-weight: bold;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+        }
+        /* Testimonials */
+        .testimonials {
+            background: #f3e5f5;
+            padding: 40px;
+            margin-top: 20px;
+        }
+        .testimonials h2 {
+            margin-bottom: 20px;
+            font-size: 26px;
+            color: #7b1fa2;
+        }
+        .testimonial {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+            max-width: 400px;
+            margin: 10px auto;
+        }
+        /* Footer */
+        .footer {
+            background: #0a3871;
+            color: white;
+            padding: 15px;
+            margin-top: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">Welcome to Sahara University</div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="Student_List.html">Student List</a>
+            <a href="Registration.html">Registration</a>
+            <a href="Feedback.html">Feedback</a>
+            <a href="#">News</a>
+            <a href="#">Events</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="box">
+            <h3>Message from the Head</h3>
+            <p>Welcome to all students who have cleared the entrance exam. We are delighted to have you!</p>
+        </div>
+        <div class="box">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">Library Portal</a></li>
+                <li><a href="#">Student Portal</a></li>
+                <li><a href="#">Academic Calendar</a></li>
+                <li><a href="#">Faculty Directory</a></li>
+            </ul>
+        </div>
+        <div class="box">
+            <h3>Announcements</h3>
+            <p>Admissions for the new session are now open. Apply before the deadline!</p>
+            <p>Upcoming webinar on career opportunities in IT sector - Register now.</p>
+        </div>
+    </div>
+
+    <!-- Achievements -->
+    <div class="achievements">
+        <h2>Our Achievements</h2>
+        <div class="stats">
+            <div class="stat">1,00,000+ Students</div>
+            <div class="stat">200+ Faculty</div>
+            <div class="stat">50+ Courses</div>
+        </div>
+    </div>
+
+    <!-- Testimonials -->
+    <div class="testimonials">
+        <h2>What Our Students Say</h2>
+        <div class="testimonial">
+            <p>"The university provides excellent opportunities and faculty support. Loved my experience!"</p>
+        </div>
+        <div class="testimonial">
+            <p>"Best place for higher education. Amazing environment and great infrastructure!"</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        © 2025 University Name. All rights reserved.
+    </div>
+
+</body>
+</html>

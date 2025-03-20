@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student List</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #e3f2fd;
+            text-align: center;
+        }
+        .header {
+            background: linear-gradient(to right, #0a3871, #0277bd);
+            color: white;
+            padding: 20px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .table-container {
+            max-width: 95%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+        th {
+            background: #0277bd;
+            color: white;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 20px;
+            background: #0a3871;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .back-btn:hover {
+            background: #ff9800;
+            color: black;
+        }
+        .footer {
+            background: #0a3871;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">Student List - 2025 Batch</div>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Roll No</th>
+                    <th>Name</th>
+                    <th>Course</th>
+                    <th>Year</th>
+                </tr>
+            </thead>
+            <tbody id="student-table">
+                <!-- Dynamic Data -->
+            </tbody>
+        </table>
+        <a href="index.html" class="back-btn">Back to Home</a>
+    </div>
+
+    <div class="footer">
+        &copy; 2025 Student Management System | Contact: support@students.com
+    </div>
+
+    <script>
+        const students = [
+            { roll: "101", name: "Amit Kumar", course: "BCA", year: "1st" },
+            { roll: "102", name: "Sana Sharma", course: "B.Tech", year: "2nd" },
+            { roll: "103", name: "Rohit Singh", course: "MCA", year: "1st" },
+            { roll: "104", name: "Anjali Verma", course: "MBA", year: "2nd" },
+            { roll: "105", name: "Ravi Das", course: "BBA", year: "3rd" }, 
+            { roll: "106", name: "Mehak Gupta", course: "B.Com", year: "1st" },
+            { roll: "107", name: "Kunal Kapoor", course: "M.Tech", year: "2nd" },
+            { roll: "108", name: "Harsh Tiwari", course: "B.Sc IT", year: "1st" },
+            { roll: "109", name: "Simran Arora", course: "B.Ed", year: "2nd" },
+            { roll: "110", name: "Rohini Malik", course: "Ph.D", year: "3rd" },
+            { roll: "111", name: "Arjun Mehta", course: "M.Sc CS", year: "2nd" },
+            { roll: "112", name: "Varsha Choudhary", course: "BCA", year: "3rd" },
+            { roll: "113", name: "Ramesh Yadav", course: "B.Tech", year: "4th" },
+            { roll: "114", name: "Neha Shukla", course: "MCA", year: "2nd" },
+            { roll: "115", name: "Suraj Verma", course: "B.Pharm", year: "1st" },
+        ];
+
+        function loadStudents() {
+            const tableBody = document.getElementById("student-table");
+            students.forEach(student => {
+                let row = `<tr>
+                    <td>${student.roll}</td>
+                    <td>${student.name}</td>
+                    <td>${student.course}</td>
+                    <td>${student.year}</td>
+                </tr>`;
+                tableBody.innerHTML += row;
+            });
+        }
+
+        window.onload = loadStudents;
+    </script>
+
+</body>
+</html>
